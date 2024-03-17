@@ -63,50 +63,141 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Resources\Translations\Code_Behind\Overview\" />
-	  <Folder Include="Resources\Translations\Code_Behind\Read List Overview\" />
-	  <Folder Include="Resources\Translations\Code_Behind\Reading Overview\" />
-	  <Folder Include="Resources\Translations\Views\Overview\" />
-	  <Folder Include="Resources\Translations\Views\Read List Overview\" />
-	  <Folder Include="Resources\Translations\Views\Reading Overview\" />
-	  <Folder Include="Resources\Translations\View_Models\Overview\" />
-	  <Folder Include="Resources\Translations\View_Models\Read List Overview\" />
-	  <Folder Include="Resources\Translations\View_Models\Reading Overview\" />
-	  <Folder Include="View Models\Reading Overview\" />
-	  <Folder Include="View Models\Read List Overview\" />
+	  <Folder Include="Models\Local DB\" />
 	  <Folder Include="Services\" />
-	  <Folder Include="View Models\Overview\" />
+	  <Folder Include="View Models\Current Book\" />
+	  <Folder Include="View Models\Finished Books List\" />
+	  <Folder Include="View Models\To Read Books List\" />
+	  <Folder Include="Views\Finished Books List\" />
+	  <Folder Include="Views\Current Book\" />
+	  <Folder Include="Views\To Read Books List\" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="Views\Overview\OverviewView.xaml.cs">
-	    <DependentUpon>OverviewView.xaml</DependentUpon>
+	  <Compile Update="Resources\Translations\Code_Behind\Current_Book\Localisation.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>Localisation.resx</DependentUpon>
 	  </Compile>
-	  <Compile Update="Views\Read List Overview\ReadBookDetailsView.xaml.cs">
-	    <DependentUpon>ReadBookDetailsView.xaml</DependentUpon>
+	  <Compile Update="Resources\Translations\Code_Behind\Finished_Books_List\Localisation.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>Localisation.resx</DependentUpon>
 	  </Compile>
-	  <Compile Update="Views\Read List Overview\ReadBooksOverviewView.xaml.cs">
-	    <DependentUpon>ReadBooksOverviewView.xaml</DependentUpon>
+	  <Compile Update="Resources\Translations\Code_Behind\Home_Views\Localisation.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>Localisation.resx</DependentUpon>
+	  </Compile>
+	  <Compile Update="Resources\Translations\Code_Behind\To_Read_Books_List\Localisation.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>Localisation.resx</DependentUpon>
+	  </Compile>
+	  <Compile Update="Resources\Translations\Views\Current_Book\Localisation.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>Localisation.resx</DependentUpon>
+	  </Compile>
+	  <Compile Update="Resources\Translations\Views\Finished_Books_List\Localisation.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>Localisation.resx</DependentUpon>
+	  </Compile>
+	  <Compile Update="Resources\Translations\Views\Home_Views\Overview\Localisation.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>Localisation.resx</DependentUpon>
+	  </Compile>
+	  <Compile Update="Resources\Translations\Views\To_Read_Books_List\Localisation.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>Localisation.resx</DependentUpon>
+	  </Compile>
+	  <Compile Update="Resources\Translations\View_Models\Current_Book\Localisation.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>Localisation.resx</DependentUpon>
+	  </Compile>
+	  <Compile Update="Resources\Translations\View_Models\Finished_Books_List\Localisation.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>Localisation.resx</DependentUpon>
+	  </Compile>
+	  <Compile Update="Resources\Translations\View_Models\Home_Views\Localisation.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>Localisation.resx</DependentUpon>
+	  </Compile>
+	  <Compile Update="Resources\Translations\View_Models\To_Read_Books_List\Localisation.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>Localisation.resx</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\Home Views\Overview View.xaml.cs">
+	    <DependentUpon>Overview View.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Views\Overview\OverviewView.xaml">
+	  <EmbeddedResource Update="Resources\Translations\Code_Behind\Current_Book\Localisation.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>Localisation.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
+	  <EmbeddedResource Update="Resources\Translations\Code_Behind\Finished_Books_List\Localisation.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>Localisation.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
+	  <EmbeddedResource Update="Resources\Translations\Code_Behind\Home_Views\Localisation.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>Localisation.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
+	  <EmbeddedResource Update="Resources\Translations\Code_Behind\To_Read_Books_List\Localisation.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>Localisation.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
+	  <EmbeddedResource Update="Resources\Translations\Views\Current_Book\Localisation.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>Localisation.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
+	  <EmbeddedResource Update="Resources\Translations\Views\Finished_Books_List\Localisation.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>Localisation.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
+	  <EmbeddedResource Update="Resources\Translations\Views\Home_Views\Overview\Localisation.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>Localisation.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
+	  <EmbeddedResource Update="Resources\Translations\Views\To_Read_Books_List\Localisation.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>Localisation.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
+	  <EmbeddedResource Update="Resources\Translations\View_Models\Current_Book\Localisation.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>Localisation.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
+	  <EmbeddedResource Update="Resources\Translations\View_Models\Finished_Books_List\Localisation.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>Localisation.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
+	  <EmbeddedResource Update="Resources\Translations\View_Models\Home_Views\Localisation.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>Localisation.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
+	  <EmbeddedResource Update="Resources\Translations\View_Models\To_Read_Books_List\Localisation.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>Localisation.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="Resources\Styles\ColourGrey.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\Read List Overview\ReadBookDetailsView.xaml">
+	  <MauiXaml Update="Resources\Styles\ColourLightBlue.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\Read List Overview\ReadBooksOverviewView.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Views\Reading Overview\BookCompletionView.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Views\Reading Overview\BookTimerView.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Views\Reading Overview\ReadingBookView.xaml">
+	  <MauiXaml Update="Views\Home Views\Overview View.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:localisation="clr-namespace:WearRead.Resources.Translations.Views.Home_Views.Overview"
+             xmlns:view_model="clr-namespace:WearRead.View_Models.Home_Views"
+             x:Class="WearRead.Views.Home_Views.OverviewView"
+             x:DataType="view_model:OverviewVM"
+             Shell.NavBarIsVisible="False">
+
+    <ScrollView BackgroundColor = "{StaticResource Grey950}">
+        <VerticalStackLayout >
+            <Grid x:Name = "GridMainOverview" RowDefinitions = "25*,50*,25*" ColumnDefinitions = "*" Padding = "20,0,20,0">
+                <Label VerticalOptions = "Center" HorizontalOptions = "Center" Grid.Row = "0" Grid.Column = "0" LineBreakMode = "WordWrap" TextColor = "{StaticResource White}" HorizontalTextAlignment = "Center" FontAttributes = "Bold" Text = "{Binding CurrentBook.Title}" />
+                <Image VerticalOptions = "Center" HorizontalOptions = "Center" Grid.Row = "1" Grid.Column = "0" HeightRequest = "80" WidthRequest = "80" BackgroundColor = "Red" />
+
+                <HorizontalStackLayout Grid.Row = "2" Grid.Column = "0"  VerticalOptions = "Center" HorizontalOptions = "Center" Spacing = "5">
+                    <Label TextColor = "{StaticResource White}" FontSize = "13" Text = "{Binding CurrentBook.CurrentPage}" />
+                    <Label TextColor = "{StaticResource White}" FontSize = "13" Text = "/" />
+                    <Label TextColor = "{StaticResource White}" FontSize = "13" Text = "{Binding CurrentBook.TotalPages}" />
+                </HorizontalStackLayout>
+            </Grid>
+
+            <Grid x:Name = "GridActionsOverview" RowDefinitions = "*,*,*" ColumnDefinitions = "*" RowSpacing = "10" Padding = "30">
+                <Button Grid.Row = "0" Grid.Column = "0" CornerRadius = "100" BackgroundColor = "{StaticResource Grey900}" Text = "{x:Static localisation:Localisation.Button_Current_Book}" />
+                <Button Grid.Row = "1" Grid.Column = "0" CornerRadius = "100" BackgroundColor = "{StaticResource Grey900}" Text = "{x:Static localisation:Localisation.Button_To_Read_Books}" />
+                <Button Grid.Row = "2" Grid.Column = "0" CornerRadius = "100" BackgroundColor = "{StaticResource Grey900}" Text = "{x:Static localisation:Localisation.Button_Read_Books}" />
+            </Grid>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
