@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WearRead.Resources.Translations.Views.To_Read_Books_List {
+namespace WearRead.Resources.Translations.Views.To_Read_Books.To_Read_Books_List {
     using System;
     
     
@@ -39,7 +39,8 @@ namespace WearRead.Resources.Translations.Views.To_Read_Books_List {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("WearRead.Resources.Translations.Views.To_Read_Books_List.Localisation", typeof(Localisation).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("WearRead.Resources.Translations.Views.To_Read_Books.To_Read_Books_List.Localisati" +
+                            "on", typeof(Localisation).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -57,6 +58,15 @@ namespace WearRead.Resources.Translations.Views.To_Read_Books_List {
             }
             set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add new book.
+        /// </summary>
+        internal static string Button_Add_New_Book {
+            get {
+                return ResourceManager.GetString("Button_Add_New_Book", resourceCulture);
             }
         }
     }

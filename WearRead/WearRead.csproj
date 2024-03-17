@@ -47,7 +47,6 @@
 
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
-		<MauiImage Update="Resources\Images\dotnet_bot.png" Resize="True" BaseSize="300,185" />
 
 		<!-- Custom Fonts -->
 		<MauiFont Include="Resources\Fonts\*" />
@@ -57,20 +56,24 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\mr_fluffy.jpg" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Models\Local DB\" />
-	  <Folder Include="Services\" />
+	  <Folder Include="Services\Database Controller\Internal\" />
 	  <Folder Include="View Models\Current Book\" />
 	  <Folder Include="View Models\Finished Books List\" />
-	  <Folder Include="View Models\To Read Books List\" />
+	  <Folder Include="View Models\To Read Books\Individual Book\" />
+	  <Folder Include="View Models\To Read Books\Popups\" />
 	  <Folder Include="Views\Finished Books List\" />
 	  <Folder Include="Views\Current Book\" />
-	  <Folder Include="Views\To Read Books List\" />
+	  <Folder Include="Views\To Read Books\Popups\" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -104,12 +107,12 @@
 	    <AutoGen>True</AutoGen>
 	    <DependentUpon>Localisation.resx</DependentUpon>
 	  </Compile>
-	  <Compile Update="Resources\Translations\Views\Home_Views\Overview\Localisation.Designer.cs">
+	  <Compile Update="Resources\Translations\Views\Home\Overview\Localisation.Designer.cs">
 	    <DesignTime>True</DesignTime>
 	    <AutoGen>True</AutoGen>
 	    <DependentUpon>Localisation.resx</DependentUpon>
 	  </Compile>
-	  <Compile Update="Resources\Translations\Views\To_Read_Books_List\Localisation.Designer.cs">
+	  <Compile Update="Resources\Translations\Views\To_Read_Books\To_Read_Books_List\Localisation.Designer.cs">
 	    <DesignTime>True</DesignTime>
 	    <AutoGen>True</AutoGen>
 	    <DependentUpon>Localisation.resx</DependentUpon>
@@ -134,8 +137,17 @@
 	    <AutoGen>True</AutoGen>
 	    <DependentUpon>Localisation.resx</DependentUpon>
 	  </Compile>
-	  <Compile Update="Views\Home Views\Overview View.xaml.cs">
+	  <Compile Update="Views\Home\Overview View.xaml.cs">
 	    <DependentUpon>Overview View.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\To Read Books\Individual Book\Add To Read Book View.xaml.cs">
+	    <DependentUpon>Add To Read Book View.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\To Read Books\Individual Book\Edit To Read Book View.xaml.cs">
+	    <DependentUpon>Edit To Read Book View.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\To Read Books\To Read Books List View.xaml.cs">
+	    <DependentUpon>To Read Books List View.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
@@ -164,11 +176,11 @@
 	    <Generator>ResXFileCodeGenerator</Generator>
 	    <LastGenOutput>Localisation.Designer.cs</LastGenOutput>
 	  </EmbeddedResource>
-	  <EmbeddedResource Update="Resources\Translations\Views\Home_Views\Overview\Localisation.resx">
+	  <EmbeddedResource Update="Resources\Translations\Views\Home\Overview\Localisation.resx">
 	    <Generator>ResXFileCodeGenerator</Generator>
 	    <LastGenOutput>Localisation.Designer.cs</LastGenOutput>
 	  </EmbeddedResource>
-	  <EmbeddedResource Update="Resources\Translations\Views\To_Read_Books_List\Localisation.resx">
+	  <EmbeddedResource Update="Resources\Translations\Views\To_Read_Books\To_Read_Books_List\Localisation.resx">
 	    <Generator>ResXFileCodeGenerator</Generator>
 	    <LastGenOutput>Localisation.Designer.cs</LastGenOutput>
 	  </EmbeddedResource>
@@ -197,7 +209,16 @@
 	  <MauiXaml Update="Resources\Styles\ColourLightBlue.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\Home Views\Overview View.xaml">
+	  <MauiXaml Update="Views\Home\Overview View.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\To Read Books\Individual Book\Add To Read Book View.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\To Read Books\Individual Book\Edit To Read Book View.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\To Read Books\To Read Books List View.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

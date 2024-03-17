@@ -1,4 +1,4 @@
-﻿using WearRead.Views.Home_Views;
+﻿using WearRead.Views.Home;
 
 namespace WearRead;
 
@@ -8,6 +8,6 @@ public partial class App : Application
     {
         InitializeComponent();
 
-        MainPage = new OverviewView();
+        MainPage = new AppShell();
     }
 }

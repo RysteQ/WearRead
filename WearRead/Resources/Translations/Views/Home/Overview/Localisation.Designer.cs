@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WearRead.Resources.Translations.Views.Home_Views.Overview {
+namespace WearRead.Resources.Translations.Views.Home.Overview {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace WearRead.Resources.Translations.Views.Home_Views.Overview {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("WearRead.Resources.Translations.Views.Home_Views.Overview.Localisation", typeof(Localisation).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("WearRead.Resources.Translations.Views.Home.Overview.Localisation", typeof(Localisation).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

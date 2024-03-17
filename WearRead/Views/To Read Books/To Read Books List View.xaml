@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:localisation="clr-namespace:WearRead.Resources.Translations.Views.To_Read_Books.To_Read_Books_List"
+             xmlns:view_model="clr-namespace:WearRead.View_Models.To_Read_Books"
+             xmlns:ui_models="clr-namespace:WearRead.Models.UI"
+             x:Class="WearRead.Views.To_Read_Books.ToReadBooksListView"
+             x:DataType="view_model:ToReadBookListVM"
+             Shell.NavBarIsVisible="False">
+
+    <ScrollView Padding = "20,20,20,0" BackgroundColor = "{StaticResource Grey950}">
+        <VerticalStackLayout>
+            <CollectionView ItemsSource = "{Binding BooksToRead}" RemainingItemsThreshold = "5" RemainingItemsThresholdReachedCommand = "{Binding CommandLoadBooksToRead}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType = "ui_models:BookUI">
+                        <Grid RowDefinitions = "40" ColumnDefinitions = "40,*" Padding = "0,5,0,5">
+                            <Image Grid.Row = "0" Grid.Column = "0" Source = "{Binding Cover}" />
+                            <Label Grid.Row = "0" Grid.Column = "1" VerticalOptions = "Start" LineBreakMode = "WordWrap" TextColor = "{StaticResource White}" FontSize = "12" Text = "{Binding Title}" />
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <Button Margin = "0,20,0,40" CornerRadius = "100" BackgroundColor = "{StaticResource Grey900}" Text = "{x:Static localisation:Localisation.Button_Add_New_Book}" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

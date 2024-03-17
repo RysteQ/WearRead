@@ -1,6 +1,6 @@
-using WearRead.View_Models.Home_Views;
+using WearRead.View_Models.Home;
 
-namespace WearRead.Views.Home_Views;
+namespace WearRead.Views.Home;
 
 public partial class OverviewView : ContentPage
 {

@@ -3,9 +3,7 @@
     x:Class="WearRead.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:WearRead.Views.Home_Views"
-    Shell.FlyoutBehavior="Disabled"
-    Title="WearRead">
+    xmlns:local="clr-namespace:WearRead.Views.Home">
 
     <ShellContent ContentTemplate = "{DataTemplate local:OverviewView}" />
 
