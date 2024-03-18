@@ -10,13 +10,17 @@
 
     <ScrollView Padding = "20,20,20,0" BackgroundColor = "{StaticResource Grey950}">
         <VerticalStackLayout>
-            <CollectionView ItemsSource = "{Binding BooksToRead}" RemainingItemsThreshold = "5" RemainingItemsThresholdReachedCommand = "{Binding CommandLoadBooksToRead}">
+            <CollectionView ItemsSource = "{Binding BooksToRead}">
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType = "ui_models:BookUI">
-                        <Grid RowDefinitions = "40" ColumnDefinitions = "40,*" Padding = "0,5,0,5">
-                            <Image Grid.Row = "0" Grid.Column = "0" Source = "{Binding Cover}" />
-                            <Label Grid.Row = "0" Grid.Column = "1" VerticalOptions = "Start" LineBreakMode = "WordWrap" TextColor = "{StaticResource White}" FontSize = "12" Text = "{Binding Title}" />
-                        </Grid>
+                        <VerticalStackLayout>
+                            <Frame Margin = "0,5,0,0" Padding = "0" BorderColor = "Transparent" BackgroundColor = "{StaticResource Grey900}" CornerRadius = "100">
+                                <Grid RowDefinitions = "40" ColumnDefinitions = "40,*" ColumnSpacing = "5">
+                                    <Image Grid.Row = "0" Grid.Column = "0" Aspect = "AspectFill" Source = "{Binding Cover, Mode = OneTime}" />
+                                    <Label Grid.Row = "0" Grid.Column = "1" VerticalOptions = "Start" LineBreakMode = "WordWrap" TextColor = "{StaticResource White}" FontSize = "12" Text = "{Binding Title}" />
+                                </Grid>
+                            </Frame>
+                        </VerticalStackLayout>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>

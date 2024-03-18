@@ -6,5 +6,5 @@ public class ORMObject
     public DateTime CreationDate { get; set; }
     public DateTime LastDateModified { get; set; }
     public DateTime CompletionDate { get; set; }
-    public ulong GCRecord { get; set; }
+    public long GCRecord { get; set; }
 }

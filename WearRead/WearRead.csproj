@@ -1,8 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>net8.0-android;net8.0-ios;net8.0-maccatalyst</TargetFrameworks>
-		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net8.0-windows10.0.19041.0</TargetFrameworks>
+		<TargetFrameworks>net8.0-android;net8.0-maccatalyst</TargetFrameworks>
 		<!-- Uncomment to also build the tizen app. You will need to install tizen by following this: https://github.com/Samsung/Tizen.NET -->
 		<!-- <TargetFrameworks>$(TargetFrameworks);net8.0-tizen</TargetFrameworks> -->
 
@@ -64,6 +63,7 @@
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
 		<PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
+		<PackageReference Include="SQLitePCLRaw.bundle_green" Version="2.1.8" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -93,6 +93,11 @@
 	    <DependentUpon>Localisation.resx</DependentUpon>
 	  </Compile>
 	  <Compile Update="Resources\Translations\Code_Behind\To_Read_Books_List\Localisation.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>Localisation.resx</DependentUpon>
+	  </Compile>
+	  <Compile Update="Resources\Translations\Services\Error_Informer\Localisation.Designer.cs">
 	    <DesignTime>True</DesignTime>
 	    <AutoGen>True</AutoGen>
 	    <DependentUpon>Localisation.resx</DependentUpon>
@@ -142,7 +147,17 @@
 	    <AutoGen>True</AutoGen>
 	    <DependentUpon>Localisation.resx</DependentUpon>
 	  </Compile>
-	  <Compile Update="Resources\Translations\View_Models\To_Read_Books_List\Localisation.Designer.cs">
+	  <Compile Update="Resources\Translations\View_Models\To_Read_Books\Add_To_Read_Book\Localisation.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>Localisation.resx</DependentUpon>
+	  </Compile>
+	  <Compile Update="Resources\Translations\View_Models\To_Read_Books\Edit_To_Read_Book\Localisation.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>Localisation.resx</DependentUpon>
+	  </Compile>
+	  <Compile Update="Resources\Translations\View_Models\To_Read_Books\To_Read_Book_List\Localisation.Designer.cs">
 	    <DesignTime>True</DesignTime>
 	    <AutoGen>True</AutoGen>
 	    <DependentUpon>Localisation.resx</DependentUpon>
@@ -175,6 +190,10 @@
 	    <LastGenOutput>Localisation.Designer.cs</LastGenOutput>
 	  </EmbeddedResource>
 	  <EmbeddedResource Update="Resources\Translations\Code_Behind\To_Read_Books_List\Localisation.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>Localisation.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
+	  <EmbeddedResource Update="Resources\Translations\Services\Error_Informer\Localisation.resx">
 	    <Generator>ResXFileCodeGenerator</Generator>
 	    <LastGenOutput>Localisation.Designer.cs</LastGenOutput>
 	  </EmbeddedResource>
@@ -214,7 +233,15 @@
 	    <Generator>ResXFileCodeGenerator</Generator>
 	    <LastGenOutput>Localisation.Designer.cs</LastGenOutput>
 	  </EmbeddedResource>
-	  <EmbeddedResource Update="Resources\Translations\View_Models\To_Read_Books_List\Localisation.resx">
+	  <EmbeddedResource Update="Resources\Translations\View_Models\To_Read_Books\Add_To_Read_Book\Localisation.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>Localisation.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
+	  <EmbeddedResource Update="Resources\Translations\View_Models\To_Read_Books\Edit_To_Read_Book\Localisation.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>Localisation.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
+	  <EmbeddedResource Update="Resources\Translations\View_Models\To_Read_Books\To_Read_Book_List\Localisation.resx">
 	    <Generator>ResXFileCodeGenerator</Generator>
 	    <LastGenOutput>Localisation.Designer.cs</LastGenOutput>
 	  </EmbeddedResource>

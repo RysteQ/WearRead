@@ -15,6 +15,8 @@ public static class DBController
     
         foreach (Type type in types)
             local_database.CreateTable(type);
+        
+        initialized = true;
     }
 
     public static void Create<T>(T to_create)
@@ -58,6 +60,6 @@ public static class DBController
             throw new Exception("Call the Init method first");
     }
 
-    private static readonly bool initialized = false;
+    private static bool initialized = false;
     private static SQLiteConnection local_database;
 }

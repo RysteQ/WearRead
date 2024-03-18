@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WearRead.Resources.Translations.View_Models.To_Read_Books_List {
+namespace WearRead.Resources.Translations.View_Models.To_Read_Books.Add_To_Read_Book {
     using System;
     
     
@@ -39,7 +39,8 @@ namespace WearRead.Resources.Translations.View_Models.To_Read_Books_List {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("WearRead.Resources.Translations.View_Models.To_Read_Books_List.Localisation", typeof(Localisation).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("WearRead.Resources.Translations.View_Models.To_Read_Books.Add_To_Read_Book.Locali" +
+                            "sation", typeof(Localisation).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

@@ -16,7 +16,7 @@ public partial class ToReadBooksListView : ContentPage
     {
         base.OnAppearing();
 
-		this.view_model.CommandLoadBooksToRead.Execute(null);
+		this.view_model.LoadBooksToRead();
     }
 
     private ToReadBookListVM view_model;
