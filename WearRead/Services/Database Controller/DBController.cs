@@ -51,7 +51,8 @@ public static class DBController
     {
         CheckInitialization();
 
-        local_database.Delete(to_update);
+        (to_update as ORMObject).GCRecord = new Random().Next();
+        local_database.Update(to_update);
     }
     
     private static void CheckInitialization()
