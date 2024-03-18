@@ -63,13 +63,13 @@
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
+		<PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Services\Database Controller\Internal\" />
+	  <Folder Include="Models\Services\" />
 	  <Folder Include="View Models\Current Book\" />
 	  <Folder Include="View Models\Finished Books List\" />
-	  <Folder Include="View Models\To Read Books\Individual Book\" />
 	  <Folder Include="View Models\To Read Books\Popups\" />
 	  <Folder Include="Views\Finished Books List\" />
 	  <Folder Include="Views\Current Book\" />
@@ -108,6 +108,16 @@
 	    <DependentUpon>Localisation.resx</DependentUpon>
 	  </Compile>
 	  <Compile Update="Resources\Translations\Views\Home\Overview\Localisation.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>Localisation.resx</DependentUpon>
+	  </Compile>
+	  <Compile Update="Resources\Translations\Views\To_Read_Books\Add_To_Read_Book\Localisation.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>Localisation.resx</DependentUpon>
+	  </Compile>
+	  <Compile Update="Resources\Translations\Views\To_Read_Books\Edit_To_Read_Book\Localisation.Designer.cs">
 	    <DesignTime>True</DesignTime>
 	    <AutoGen>True</AutoGen>
 	    <DependentUpon>Localisation.resx</DependentUpon>
@@ -177,6 +187,14 @@
 	    <LastGenOutput>Localisation.Designer.cs</LastGenOutput>
 	  </EmbeddedResource>
 	  <EmbeddedResource Update="Resources\Translations\Views\Home\Overview\Localisation.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>Localisation.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
+	  <EmbeddedResource Update="Resources\Translations\Views\To_Read_Books\Add_To_Read_Book\Localisation.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>Localisation.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
+	  <EmbeddedResource Update="Resources\Translations\Views\To_Read_Books\Edit_To_Read_Book\Localisation.resx">
 	    <Generator>ResXFileCodeGenerator</Generator>
 	    <LastGenOutput>Localisation.Designer.cs</LastGenOutput>
 	  </EmbeddedResource>

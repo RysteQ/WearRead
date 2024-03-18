@@ -1,12 +1,27 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:localisation="clr-namespace:WearRead.Resources.Translations.Views.To_Read_Books.Add_To_Read_Book"
+             xmlns:view_model="clr-namespace:WearRead.View_Models.To_Read_Books.Individual_Book"
              x:Class="WearRead.Views.To_Read_Books_List.Individual_Book.AddToReadBookView"
-             Title="AddToReadBookView">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             x:DataType="view_model:AddToReadBookVM"
+             Shell.NavBarIsVisible="False">
+
+    <ScrollView Padding = "20,20,20,0" BackgroundColor = "{StaticResource Grey950}">
+        <VerticalStackLayout Spacing = "10">
+            <Entry HorizontalTextAlignment = "Center" Placeholder = "{x:Static localisation:Localisation.Label_Book_Title_Placeholder}" TextColor = "{StaticResource White}" Text = "{Binding NewBook.Title}" />
+            <ImageButton HeightRequest = "80" WidthRequest = "80" Source = "mr_fluffy" />
+
+            <Grid RowDefinitions = "Auto,Auto" ColumnDefinitions = "40*,60*" RowSpacing = "0">
+                <Label Grid.Row = "0" Grid.Column = "0" VerticalTextAlignment = "Center" TextColor = "{StaticResource White}" Text = "{x:Static localisation:Localisation.Label_Total_Pages}" />
+                <Entry Grid.Row = "0" Grid.Column = "1" Keyboard = "Numeric" TextColor = "{StaticResource White}" Text = "{Binding NewBook.TotalPages}" />
+
+                <Label Grid.Row = "1" Grid.Column = "0" VerticalTextAlignment = "Center" TextColor = "{StaticResource White}" Text = "{x:Static localisation:Localisation.Label_Book_Type}" />
+                <Picker Grid.Row = "1" Grid.Column = "1" />
+            </Grid>
+
+            <Button Margin = "0,20,0,40" CornerRadius = "100" BackgroundColor = "{StaticResource Grey900}" Text = "{x:Static localisation:Localisation.Button_Add_New_Book}" />
+        </VerticalStackLayout>
+    </ScrollView>
+
 </ContentPage>

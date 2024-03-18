@@ -9,6 +9,7 @@ public class ToReadBookListVM
     public ToReadBookListVM()
     {
         this.CommandLoadBooksToRead = new(LoadBooksToRead);
+        this.CommandAddNewBook = new(AddNewBook);
     }
 
     public void LoadBooksToRead()

@@ -21,7 +21,7 @@
                 </CollectionView.ItemTemplate>
             </CollectionView>
 
-            <Button Margin = "0,20,0,40" CornerRadius = "100" BackgroundColor = "{StaticResource Grey900}" Text = "{x:Static localisation:Localisation.Button_Add_New_Book}" />
+            <Button Margin = "0,20,0,40" CornerRadius = "100" BackgroundColor = "{StaticResource Grey900}" Text = "{x:Static localisation:Localisation.Button_Add_New_Book}" Command = "{Binding CommandAddNewBook}" />
         </VerticalStackLayout>
     </ScrollView>
 
